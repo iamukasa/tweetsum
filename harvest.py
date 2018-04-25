@@ -15,11 +15,12 @@ b=" "
 for s in new_tweets:
 
      
-            b= b+ ". "+ s.text
+            b="\n"+ b+ ". "+ s.text
 
 print ("tweets",b)
 
 
 print("And the summary for  ",B," is")
-thesummarised=summarise.FrequencySummariser().summarize(b.strip(),1)
+thesummarised=summarise.FrequencySummariser().summarize(b.strip(),5)
 print (thesummarised)
+print ("out of ", str(len(new_tweets)), " tweets")
